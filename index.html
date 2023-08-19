@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Summer Sale</title>
+
+    <!-- Daisy Ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.4.0/dist/full.css" rel="stylesheet" type="text/css" />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts - Works Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom Css -->
+    <style>
+        .font-work-sans{
+            font-family: 'Work Sans', sans-serif;
+        }
+    </style>
+
+    <!-- Custom tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'banner-color': '#F9F6E2',
+                        'primary-color': '#E527B2',
+                        'black-color': '#111'
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    
+
+<body class="font-work-sans">
+    <!-- Header Start -->
+    <header class="bg-banner-color p-2 pb-8 lg:p-20">
+        <!-- Banner Start -->
+        <div id="banner" class="flex flex-col-reverse gap-8 md:gap-12 lg:flex-row lg:gap-0 justify-around items-center">
+            <!-- banner text -->
+            <div id="banner-text" class="text-center text-black-color">
+                <h3 class="text-3xl font-medium mb-8 lg:mb-11 ">---SALE FEVER---</h3>
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-10 lg:mb-16">Purchase TK 200 or <br>
+                above & get <span class="text-primary-color">20% off</span>
+                </h1>
+                <div class="flex gap-4 justify-center text-xl lg:text-2xl items-center">
+                    <p class="font-medium"> Use Promo Code</p>
+                    <p class="bg-primary-color px-6 py-2 text-white rounded-md font-semibold ">SELL200</p>
+                </div>
+            </div>
+            <!-- banner Image -->
+            <div id="banner-image">
+                <img src="./images/Summer 1.png" alt="">
+            </div>
+        </div>
+        <!-- Banner End -->
+    </header>
+    <!-- Header End -->
 </body>
+
 </html>

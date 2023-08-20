@@ -317,8 +317,8 @@
                     <div class="form-control bg-white p-6  rounded-lg">
                         <h3 class="text-2xl font-medium mb-4">Have coupon?</h3>
                         <div class="input-group">
-                            <input type="text" placeholder="Coupon code" class="input input-bordered py-4 pl-4 w-56" />
-                            <button class="btn btn-square bg-primary-color text-white py-4 px-10 hover:bg-purple-600">
+                            <input id="coupon-input-field" type="text" placeholder="Coupon code" class="input input-bordered py-4 pl-4 w-56" />
+                            <button id="coupon-btn" onclick="discount()" class="btn btn-square bg-primary-color text-white py-4 px-10 hover:bg-purple-600" disabled>
                                 Apply
                             </button>
                         </div>
@@ -333,17 +333,18 @@
                             <p>Total Price: <span id="total-price-text" class="text-gray-400">00.00</span> <span
                                     class="text-gray-400">TK</span></p>
 
-                            <p>Discount : <span class="text-gray-400">00.00 </span> <span
+                            <p>Discount : <span id="discount-text" class="text-gray-400">00.00 </span> <span
                                     class="text-gray-400">TK</span></p>
 
-                            <p>Total : <span class="text-gray-400">00.00</span> <span class="text-gray-400">TK</span>
+                            <p>Total : <span id="total-text" class="text-gray-400">00.00</span> <span class="text-gray-400">TK</span>
                             </p>
 
                         </div>
                         <hr class="w-full text-gray-600 my-6">
                         <div class="absolute">
                             <button
-                                class="btn text-xl font-semibold text-white bg-primary-color px-16 py-4 hover:bg-purple-500 h-full">Make
+                                id="purchase-btn"
+                                class="btn text-xl font-semibold text-white bg-primary-color px-16 py-4 hover:bg-purple-500 h-full" disabled>Make
                                 Purchase</button>
                         </div>
                     </div>
@@ -354,8 +355,8 @@
     </main>
     <!-- Main Section End -->
 
-    <script src="./js/utilities.js"></script>
-    <script src="./js/calculation.js"></script>
+    <script src="./js/script.js"></script>
+
 </body>
 
 </html>

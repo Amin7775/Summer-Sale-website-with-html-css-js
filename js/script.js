@@ -9,7 +9,7 @@ function setCartList(CardId) {
   const count = cartList.childElementCount;
   const p = document.createElement("p");
 
-  p.innerHTML = `${count}. ${card(CardId)} `;
+  p.innerHTML = `${count + 1}. ${card(CardId)} `;
 
   cartList.appendChild(p);
 }
@@ -35,11 +35,10 @@ function totalPrice(price) {
   totalPriceValue = totalPriceValue.toFixed(2);
 
   totalPriceValueInnerText.innerText = totalPriceValue;
-  console.log(totalPriceValueText);
+  // console.log(totalPriceValueText);
 
   // Redirect to total for calculations to total after every entry
   total();
-
 }
 
 // Check For Coupon code and enable discount
@@ -82,21 +81,21 @@ function total() {
   const totalPriceValueInnerText = document.getElementById("total-price-text");
   const totalPriceValueText = totalPriceValueInnerText.innerText;
   const totalPriceValueParseFloat = parseFloat(totalPriceValueText);
-  console.log(totalPriceValueParseFloat, "total price");
+  // console.log(totalPriceValueParseFloat, "total price");
 
   const discountTextId = document.getElementById("discount-text");
   let discountText = discountTextId.innerText;
   let discountAmount = parseFloat(discountText);
-  console.log(discountAmount, "discount");
+  // console.log(discountAmount, "discount");
 
   const netValue = totalPriceValueParseFloat - discountAmount;
-  console.log(netValue, "net");
-  const purchaseBtn = document.getElementById('purchase-btn');
-  
-  if(netValue > 0){
-    purchaseBtn.removeAttribute('disabled') 
-  }else{
-    purchaseBtn.setAttribute('disabled', true);
+  // console.log(netValue, "net");
+  const purchaseBtn = document.getElementById("purchase-btn");
+
+  if (netValue > 0) {
+    purchaseBtn.removeAttribute("disabled");
+  } else {
+    purchaseBtn.setAttribute("disabled", true);
   }
 
   const netValueString = netValue.toFixed(2);
@@ -104,3 +103,32 @@ function total() {
   const totalText = document.getElementById("total-text");
   totalText.innerText = netValueString;
 }
+
+// clear data after using go back button from modal
+document
+  .getElementById("modal-goback-btn")
+  .addEventListener("click", function () {
+    // input field
+    const couponInputField = document.getElementById("coupon-input-field");
+    couponInputField.value = "";
+
+    // List
+    const list = document.getElementById("cart-list");
+    list.innerText = "";
+
+    // Buttons
+    const couponBtn = document.getElementById("coupon-btn");
+    couponBtn.setAttribute("disabled", true);
+
+    const purchaseBtn = document.getElementById("purchase-btn");
+    purchaseBtn.setAttribute("disabled", true);
+
+    // calculations
+    function valueRefresh(CardId) {
+      let name = document.getElementById(CardId);
+      name.innerText = "00.00";
+    }
+    valueRefresh("total-price-text");
+    valueRefresh("discount-text");
+    valueRefresh("total-text");
+  });

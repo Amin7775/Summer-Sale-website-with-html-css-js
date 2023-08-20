@@ -44,14 +44,14 @@
 
 <body class="font-work-sans">
     <!-- Header Start -->
-    <header class="bg-banner-color p-2 pb-8 lg:p-20">
+    <header class="bg-banner-color p-1 pb-8 lg:p-20">
         <!-- Banner Start -->
         <div id="banner" class="flex flex-col-reverse gap-8 md:gap-12 lg:flex-row lg:gap-0 justify-around items-center">
             <!-- banner text -->
             <div id="banner-text" class="text-center text-black-color">
-                <h3 class="text-3xl font-medium mb-8 lg:mb-11 ">---SALE FEVER---</h3>
+                <h3 class="text-2xl md:text-2xl lg:text-3xl font-medium mb-8 lg:mb-11 ">---SALE FEVER---</h3>
 
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-10 lg:mb-16">Purchase TK 200 or <br>
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-10 lg:mb-16">Purchase TK 200 or <br>
                     above & get <span class="text-primary-color">20% off</span>
                 </h1>
                 <div class="flex gap-4 justify-center text-xl lg:text-2xl items-center">
@@ -313,14 +313,14 @@
                 </div>
             </div>
             <!-- Cart Section -->
-            <div id="cart" class="w-[400px] my-10 lg:mt-[186px] mx-auto text-black-color px-5 relative">
-                <div class="flex flex-col items-center ">
+            <div id="cart" class="w-80 md:w-[400px] lg:w-[400px] my-10 lg:mt-[186px] mx-auto text-black-color px-5 relative">
+                <div class="flex flex-col items-center">
                     <!-- coupon Code -->
                     <div class="form-control bg-white p-6  rounded-lg">
-                        <h3 class="text-2xl font-medium mb-4">Have coupon?</h3>
+                        <h3 class="text-xl md:text-2xl lg:text-2xl font-medium mb-4">Have coupon?</h3>
                         <div class="input-group">
                             <input id="coupon-input-field" type="text" placeholder="Coupon code"
-                                class="input input-bordered py-4 pl-4 w-56" />
+                                class="input input-bordered py-4 pl-4 w-[148px] md:w-56 lg:w-56" />
                             <button id="coupon-btn" onclick="discount()"
                                 class="btn btn-square bg-primary-color text-white py-4 px-10 hover:bg-purple-600"
                                 disabled>
@@ -330,11 +330,11 @@
                     </div>
                     <!-- Calculation -->
                     <div id="Calculation" class="bg-white p-6  rounded-lg mt-6 w-full">
-                        <div id="cart-list" class="flex flex-col gap-2 text-2xl font-medium">
+                        <div id="cart-list" class="flex flex-col gap-2 text-xl md:text-2xl lg:text-2xl font-medium">
                             <!-- <p>Click on product to add </p> -->
                         </div>
                         <hr class="w-full text-gray-600 my-3">
-                        <div id="cart-calculation" class="flex flex-col gap-2 text-2xl font-medium">
+                        <div id="cart-calculation" class="flex flex-col gap-2 text-xl md:text-2xl lg:text-2xl font-medium">
                             <p>Total Price: <span id="total-price-text" class="text-gray-400">00.00</span> <span
                                     class="text-gray-400">TK</span></p>
 
@@ -349,7 +349,7 @@
                         <hr class="w-full text-gray-600 my-6">
                         <div class="absolute">
                             <button id="purchase-btn" onclick="my_modal_1.showModal()"
-                                class="btn text-xl font-semibold text-white bg-primary-color px-16 py-4 hover:bg-purple-500 h-full"
+                                class="btn text-xl font-semibold text-white bg-primary-color left-3 md:left-14 lg:left-2 md:px-15 md:py-4 lg:px-16 lg:py-4 hover:bg-purple-500 h-full relative"
                                 disabled>Make
                                 Purchase</button>
 

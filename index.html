@@ -239,7 +239,8 @@
                         <!-- Card 7 -->
                         <div
                             class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]">
-                            <figure class="px-10 py-10 bg-gray-100" onclick="setCartList('card-7-title'); getPrice('card-7-price')">
+                            <figure class="px-10 py-10 bg-gray-100"
+                                onclick="setCartList('card-7-title'); getPrice('card-7-price')">
                                 <img src="./images/prod7.png " alt="Shoes" class="rounded-xl " />
                             </figure>
                             <div class="card-body items-center text-center ">
@@ -263,7 +264,8 @@
                         <!-- Card 8 -->
                         <div
                             class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]">
-                            <figure class="px-10 py-9 bg-gray-100" onclick="setCartList('card-8-title'); getPrice('card-8-price')">
+                            <figure class="px-10 py-9 bg-gray-100"
+                                onclick="setCartList('card-8-title'); getPrice('card-8-price')">
                                 <img src="./images/prod8.png " alt="Shoes" class="rounded-xl " />
                             </figure>
                             <div class="card-body items-center text-center ">
@@ -317,8 +319,11 @@
                     <div class="form-control bg-white p-6  rounded-lg">
                         <h3 class="text-2xl font-medium mb-4">Have coupon?</h3>
                         <div class="input-group">
-                            <input id="coupon-input-field" type="text" placeholder="Coupon code" class="input input-bordered py-4 pl-4 w-56" />
-                            <button id="coupon-btn" onclick="discount()" class="btn btn-square bg-primary-color text-white py-4 px-10 hover:bg-purple-600" disabled>
+                            <input id="coupon-input-field" type="text" placeholder="Coupon code"
+                                class="input input-bordered py-4 pl-4 w-56" />
+                            <button id="coupon-btn" onclick="discount()"
+                                class="btn btn-square bg-primary-color text-white py-4 px-10 hover:bg-purple-600"
+                                disabled>
                                 Apply
                             </button>
                         </div>
@@ -336,16 +341,37 @@
                             <p>Discount : <span id="discount-text" class="text-gray-400">00.00 </span> <span
                                     class="text-gray-400">TK</span></p>
 
-                            <p>Total : <span id="total-text" class="text-gray-400">00.00</span> <span class="text-gray-400">TK</span>
+                            <p>Total : <span id="total-text" class="text-gray-400">00.00</span> <span
+                                    class="text-gray-400">TK</span>
                             </p>
 
                         </div>
                         <hr class="w-full text-gray-600 my-6">
                         <div class="absolute">
-                            <button
-                                id="purchase-btn"
-                                class="btn text-xl font-semibold text-white bg-primary-color px-16 py-4 hover:bg-purple-500 h-full" disabled>Make
+                            <button id="purchase-btn" onclick="my_modal_1.showModal()"
+                                class="btn text-xl font-semibold text-white bg-primary-color px-16 py-4 hover:bg-purple-500 h-full"
+                                disabled>Make
                                 Purchase</button>
+
+                            <!-- Modal -->
+                            <!-- You can open the modal using ID.showModal() method -->
+                            <dialog id="my_modal_1" class="modal">
+                                <form method="dialog"
+                                    class="modal-box min-w-[40vw] min-h-[50vh] lg:min-h-[75vh] flex flex-col items-center justify-center">
+
+                                    <img class="mx-auto  w-1/3 my-4  lg:mb-10" src="./images/congo.png" alt="">
+                                    <h1 class="text-4xl lg:text-5xl font-bold text-black-color mb-4">
+                                        Congratulations</h1>
+                                    <p class="text-xl text-gray-600 text-center mb-10">
+                                        Your Purchase the product</p>
+
+                                    <!-- buttons -->
+                                    <button id="modal-goback-btn"
+                                        class="btn text-xl font-semibold text-white bg-primary-color px-16 py-4 hover:bg-purple-500 h-full">Go
+                                        Back</button>
+
+                                </form>
+                            </dialog>
                         </div>
                     </div>
                 </div>

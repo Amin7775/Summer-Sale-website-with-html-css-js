@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme = "light">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
@@ -79,10 +79,9 @@
                     <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
                         <!-- Card 1 -->
-                        <div
-                            id="card-1"
+                        <div id="card-1"
                             class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
-                            onclick="setCartList('card-1-title')">
+                            onclick="setCartList('card-1-title'); getPrice('card-1-price')">
                             <figure class="px-10 py-10 bg-gray-100">
                                 <img src="./images/prod1.png " alt="Shoes" class="rounded-xl " />
                             </figure>
@@ -99,15 +98,13 @@
                                 </div>
 
                                 <p id="card-1-title" class="card-title text-xl font-semibold">K.Accessories</p>
-                                <h2 class="text-xl text-gray-500">39.00 TK</h2>
-
+                                <h2 class="text-xl text-gray-500"><span id="card-1-price">39.00</span> TK</h2>
 
                             </div>
                         </div>
                         <!-- Card 2 -->
-                        <div
-                            class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
-                            onclick="setCartList('card-2-title')">
+                        <div class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
+                            onclick="setCartList('card-2-title');getPrice('card-2-price')">
                             <figure class="px-10 py-9 bg-gray-100">
                                 <img src="./images/prod2.png " alt="Shoes" class="rounded-xl " />
                             </figure>
@@ -124,15 +121,14 @@
                                 </div>
 
                                 <p id="card-2-title" class="card-title text-xl font-semibold">K.Accessories</p>
-                                <h2 class="text-xl text-gray-500">25.00TK</h2>
+                                <h2 class="text-xl text-gray-500"><span id="card-2-price">25.00</span>TK</h2>
 
 
                             </div>
                         </div>
                         <!-- Card 3 -->
-                        <div
-                            class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
-                            onclick="setCartList('card-3-title')">
+                        <div class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
+                            onclick="setCartList('card-3-title');getPrice('card-3-price')">
                             <figure class="px-10 py-10 bg-gray-100">
                                 <img src="./images/prod3.png " alt="Shoes" class="rounded-xl " />
                             </figure>
@@ -149,7 +145,7 @@
                                 </div>
 
                                 <p id="card-3-title" class="card-title text-xl font-semibold">Home Cooker</p>
-                                <h2 class="text-xl text-gray-500">49.00 TK</h2>
+                                <h2 class="text-xl text-gray-500"><span id="card-3-price">49.00</span> TK</h2>
 
                             </div>
                         </div>
@@ -162,9 +158,8 @@
                     <div class="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
 
                         <!-- Card 4 -->
-                        <div
-                            class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
-                            onclick="setCartList('card-4-title')">
+                        <div class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
+                            onclick="setCartList('card-4-title');getPrice('card-4-price')">
                             <figure class="px-10 py-10 bg-gray-100">
                                 <img src="./images/prod4.png " alt="Shoes" class="rounded-xl " />
                             </figure>
@@ -181,15 +176,14 @@
                                 </div>
 
                                 <p id="card-4-title" class="card-title text-xl font-semibold">Sports Back Cap</p>
-                                <h2 class="text-xl text-gray-500">49.00 TK</h2>
+                                <h2 class="text-xl text-gray-500"><span id="card-4-price">49.00</span> TK</h2>
 
 
                             </div>
                         </div>
                         <!-- Card 5 -->
-                        <div
-                            class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
-                            onclick="setCartList('card-5-title')">
+                        <div class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
+                            onclick="setCartList('card-5-title'); getPrice('card-5-price')">
                             <figure class="px-10 py-9 bg-gray-100">
                                 <img src="./images/prod5.png " alt="Shoes" class="rounded-xl " />
                             </figure>
@@ -206,15 +200,14 @@
                                 </div>
 
                                 <p id="card-5-title" class="card-title text-xl font-semibold">Full Jersey Set</p>
-                                <h2 class="text-xl text-gray-500">69.00TK</h2>
+                                <h2 class="text-xl text-gray-500"><span id="card-5-price">69.00</span> TK</h2>
 
 
                             </div>
                         </div>
                         <!-- Card 6 -->
-                        <div
-                            class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
-                            onclick="setCartList('card-6-title')">
+                        <div class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
+                            onclick="setCartList('card-6-title'); getPrice('card-6-price')">
                             <figure class="px-10 py-10 bg-gray-100">
                                 <img src="./images/prod6.png " alt="Shoes" class="rounded-xl " />
                             </figure>
@@ -231,7 +224,7 @@
                                 </div>
 
                                 <p id="card-6-title" class="card-title text-xl font-semibold">Sports cates</p>
-                                <h2 class="text-xl text-gray-500">159.00 TK</h2>
+                                <h2 class="text-xl text-gray-500"><span id="card-6-price">159.00</span> TK</h2>
 
                             </div>
                         </div>
@@ -246,8 +239,7 @@
                         <!-- Card 7 -->
                         <div
                             class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]">
-                            <figure class="px-10 py-10 bg-gray-100"
-                            onclick="setCartList('card-7-title')">
+                            <figure class="px-10 py-10 bg-gray-100" onclick="setCartList('card-7-title'); getPrice('card-7-price')">
                                 <img src="./images/prod7.png " alt="Shoes" class="rounded-xl " />
                             </figure>
                             <div class="card-body items-center text-center ">
@@ -263,7 +255,7 @@
                                 </div>
 
                                 <p id="card-7-title" class="card-title text-xl font-semibold">Single Relax Chair</p>
-                                <h2 class="text-xl text-gray-500">185.00 TK</h2>
+                                <h2 class="text-xl text-gray-500"><span id="card-7-price">185.00</span> TK</h2>
 
 
                             </div>
@@ -271,8 +263,7 @@
                         <!-- Card 8 -->
                         <div
                             class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]">
-                            <figure class="px-10 py-9 bg-gray-100"
-                            onclick="setCartList('card-8-title')">
+                            <figure class="px-10 py-9 bg-gray-100" onclick="setCartList('card-8-title'); getPrice('card-8-price')">
                                 <img src="./images/prod8.png " alt="Shoes" class="rounded-xl " />
                             </figure>
                             <div class="card-body items-center text-center ">
@@ -288,15 +279,14 @@
                                 </div>
 
                                 <p id="card-8-title" class="card-title text-xl font-semibold">Children play</p>
-                                <h2 class="text-xl text-gray-500">299.00 TK</h2>
+                                <h2 class="text-xl text-gray-500"><span id="card-8-price">299.00</span> TK</h2>
 
 
                             </div>
                         </div>
                         <!-- Card 9 -->
-                        <div
-                            class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
-                            onclick="setCartList('card-9-title')">
+                        <div class="card bg-base-100 shadow-xl flex-1 border-2 border-gray-100 rounded-lg p-5 max-w-[400px]"
+                            onclick="setCartList('card-9-title'); getPrice('card-9-price')">
                             <figure class="px-10 py-10 bg-gray-100">
                                 <img src="./images/prod9.png " alt="Shoes" class="rounded-xl " />
                             </figure>
@@ -313,7 +303,7 @@
                                 </div>
 
                                 <p id="card-9-title" class="card-title text-xl font-semibold">Flexible Sofa</p>
-                                <h2 class="text-xl text-gray-500">339.00 TK</h2>
+                                <h2 class="text-xl text-gray-500"><span id="card-9-price">339.00</span> TK</h2>
 
                             </div>
                         </div>
@@ -352,7 +342,9 @@
                         </div>
                         <hr class="w-full text-gray-600 my-6">
                         <div class="absolute">
-                            <button class="btn text-xl font-semibold text-white bg-primary-color px-16 py-4 hover:bg-purple-500 h-full">Make Purchase</button>
+                            <button
+                                class="btn text-xl font-semibold text-white bg-primary-color px-16 py-4 hover:bg-purple-500 h-full">Make
+                                Purchase</button>
                         </div>
                     </div>
                 </div>
